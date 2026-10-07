@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio de Soufiane Amousse, apprenant développeur web.">
-  <title>Soufiane Amousse — Portfolio</title>
+  <title>Soufiane Amousse — Contact</title>
 
  <!-- Police Poppins (Google Fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
@@ -30,23 +30,48 @@
     </div>
   </header>
 
-  <main>
+    <main>
+        <section>
+            <h1>Contact</h1>
+            <p>Une question, une proposition ? Écrivez-moi.</p>
+            
+                    <form class="formulaire" action="#" method="post">
+                    <label for="nom">Nom</label>
+                    <input id="nom" name="nom" type="text" required>
 
-    <!-- ========== PRÉSENTATION ========== -->
-    <section id="presentation" class="presentation">
-      <div class="conteneur presentation__contenu">
-        <div class="presentation__texte">
-          <p class="surtitre">Bonjour, je suis</p>
-          <h1>Soufiane Amousse</h1>
-          <p class="metier">Passionné par le design graphique & apprenant développeur web</p>
-          <p>Je m’intéresse au design graphique et j’apprends actuellement le développement web afin de développer mes compétences et de réaliser mes propres projets.</p>
-          <a class="bouton" href="projets.html">Voir mes projets</a>
-        </div>
-        <img class="presentation__photo" src="images/avatar.svg" alt="Portrait de Soufiane Amousse" width="280" height="280">
-      </div>
-    </section>
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" required>
 
-  </main>
+                    <label for="sujet">Sujet</label>
+                    <input id="sujet" name="sujet" type="text" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button class="bouton" type="submit">Envoyer</button>
+                    </form>
+
+                    <ul class="reseaux">
+                    <li><a class="lien" href="https://github.com/soufanDesi">GitHub</a></li>
+                    <li><a class="lien" href="#">LinkedIn</a></li>
+                    </ul>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
 
   <!-- ========== PIED DE PAGE ========== -->
   <footer class="pied">
