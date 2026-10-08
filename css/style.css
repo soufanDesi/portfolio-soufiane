@@ -340,8 +340,42 @@ a {
 }
 
 /* ---------- 8. Contact ---------- */
+.contact__grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.contact__infos h1 {
+  font-size: 76px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.contact__infos p {
+  max-width: 360px;
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--couleur-texte-doux);
+}
+
+.contact__infos p::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--couleur-principale);
+  margin-top: 32px;
+}
+
 .formulaire {
+  width: 100%;
   max-width: 560px;
+  padding: 48px;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 20px;
 }
 
 .formulaire label {
@@ -366,8 +400,36 @@ a {
 
 .reseaux {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
   margin-top: 40px;
+}
+
+.reseaux .lien {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: #2563eb;
+}
+
+.reseaux__icone {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+}
+
+.reseaux__icone img {
+  width: 22px;
+  height: 22px;
+}
+
+.page-contact {
+  padding-top: 50px;
+  padding-bottom: 80px;
 }
 
 /* ---------- 9. Pied de page ---------- */
