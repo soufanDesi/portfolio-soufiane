@@ -163,6 +163,9 @@ a {
 
 .presentation .bouton {
   margin-top: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .bouton:hover {
@@ -175,6 +178,11 @@ a {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+}
+
+.bouton__fleche {
+  width: 16px;
+  height: 14px;
 }
 
 /* ---------- 5. Sections communes ---------- */
@@ -231,20 +239,46 @@ a {
 
 /* ---------- 7. Projets ---------- */
 /* Les projets sont empilés les uns sous les autres. */
+.page-projets h1 {
+  font-size: 56px;
+  margin-bottom: 12px;
+}
+
+.projets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 24px;
+}
+
 .projet {
   display: flex;
-  align-items: center;
-  gap: 32px;
-  margin-bottom: 24px;
-  padding: 24px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 8px;
   border: 1px solid var(--couleur-bordure);
   border-radius: var(--rayon);
 }
 
 .projet__image {
-  width: 320px;
-  height: 200px;
-  border-radius: var(--rayon);
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.projet__texte {
+  padding: 20px 0 0;
+}
+
+.projet__texte h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.projet__texte p {
+  font-size: 15px;
+  color: var(--couleur-texte-doux);
 }
 
 .projet h3 {
@@ -264,10 +298,45 @@ a {
 }
 
 .technologies li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   padding: 4px 12px;
   border-radius: 6px;
   font-size: 14px;
   background-color: var(--couleur-fond-clair);
+}
+
+.technologies .competence__icone {
+  width: 16px;
+  height: 16px;
+}
+
+.projet__texte {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.projet__bas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.projet__bas .technologies {
+  margin: 0;
+}
+
+.projet__bas .lien {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 /* ---------- 8. Contact ---------- */
@@ -407,4 +476,3 @@ a {
   font-size: 20px;
   margin-bottom: 0;
 }
-
