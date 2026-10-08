@@ -16,14 +16,14 @@
 :root {
   /* Couleurs */
   --couleur-fond: #ffffff;
-  --couleur-fond-clair: #f4f6fa;
-  --couleur-texte: #1c2333;
-  --couleur-texte-doux: #5b6478;
-  --couleur-principale: #2f5bea;
-  --couleur-bordure: #dde3ec;
+  --couleur-fond-clair: #f1f5f9;
+  --couleur-texte: #0f172a;
+  --couleur-texte-doux: #64748b;
+  --couleur-principale: #0f766e;
+  --couleur-bordure: #e2e8f0;
 
   /* Typographie */
-  --police: "Inter", Arial, sans-serif;
+  --police: "Poppins", Arial, sans-serif;
 
   /* Mise en page */
   --largeur-max: 1100px;
@@ -117,6 +117,15 @@ a {
   color: var(--couleur-texte-doux);
 }
 
+.menu a.active {
+  color: var(--couleur-principale);
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: var(--couleur-principale);
+}
+
 /* ---------- 4. Présentation ---------- */
 .presentation {
   padding: 96px 0;
@@ -141,6 +150,8 @@ a {
 
 .presentation h1 {
   font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .metier {
@@ -154,10 +165,16 @@ a {
   margin-top: 32px;
 }
 
+.bouton:hover {
+  background-color: #115e59;
+}
+
 .presentation__photo {
   width: 280px;
   height: 280px;
   border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 /* ---------- 5. Sections communes ---------- */
@@ -191,6 +208,25 @@ a {
   border-radius: var(--rayon);
   font-weight: 600;
   background-color: var(--couleur-fond);
+}
+
+.a-propos h1 {
+  max-width: 440px;
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+.point {
+  color: var(--couleur-principale);
+}
+
+.a-propos__description {
+  max-width: 550px;
+  margin-top: 32px;
+  font-size: 19px;
+  color: var(--couleur-texte-doux);
 }
 
 /* ---------- 7. Projets ---------- */
@@ -267,9 +303,108 @@ a {
 
 /* ---------- 9. Pied de page ---------- */
 .pied {
-  padding: 32px 0;
+  padding: 40px 0;
   border-top: 1px solid var(--couleur-bordure);
   font-size: 15px;
   text-align: center;
   color: var(--couleur-texte-doux);
+  margin-top: 45px;
 }
+
+.a-propos__grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.a-propos__competences {
+  padding-top: 40px;
+}
+
+.a-propos__competences h2 {
+  font-size: 36px;
+}
+
+.a-propos__competences .section__intro {
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+
+.a-propos__competences .competences {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.a-propos__competences .competences li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 72px;
+  padding: 12px;
+  white-space: nowrap;
+}
+
+.parcours__grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  position: relative;
+  padding-top: 48px;
+}
+
+.parcours__grille::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background-color: var(--couleur-bordure);
+}
+
+.parcours h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.parcours p {
+  color: var(--couleur-texte-doux);
+}
+
+.competence__icone {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.parcours__titre {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.parcours__icone {
+  width: 28px;
+  height: 28px;
+  background-color: #eff6ff;
+  border-radius: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.parcours .parcours__titre h2 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
