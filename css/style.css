@@ -99,7 +99,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 72px;
+  height: 81px;
+  /* margin-left: 40px; */
 }
 
 .logo {
@@ -109,11 +110,11 @@ a {
 
 .menu {
   display: flex;
-  gap: 32px;
+  gap: 40px;
 }
 
 .menu a {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--couleur-texte-doux);
 }
 
@@ -247,7 +248,7 @@ a {
 .projets {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 24px;
+  gap: 8px 23px;
 }
 
 .projet {
